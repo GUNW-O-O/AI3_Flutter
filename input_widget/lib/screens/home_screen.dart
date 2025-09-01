@@ -28,8 +28,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     return Scaffold(
       body: TabBarView(
         children: [
+          LoginScreen(),
           JoinScreen(),
-          LoginScreen()
         ],
         controller: controller,
       ),
