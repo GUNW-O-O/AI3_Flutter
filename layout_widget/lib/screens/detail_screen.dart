@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:layout_widget/models/product.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key});
+  // 상품 객체 선언
+  final Product product;
+  // 생성자에 상품 변수 추가
+  const DetailScreen({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class DetailScreen extends StatelessWidget {
               height: 280,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("image/product.png"),
+                  image: AssetImage(product.image ?? "image/product.png"),
                   fit: BoxFit.cover
                 ),
                 borderRadius: BorderRadius.circular(20.0)
@@ -25,7 +29,7 @@ class DetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12.0,),
             Text(
-              "자바스크립트",
+              product.title ?? "상품 이름",
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold
@@ -33,7 +37,7 @@ class DetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12.0,),
             Text(
-              "상품 설명입니다",
+              product.description ??"상품 설명입니다",
               style: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.w500
