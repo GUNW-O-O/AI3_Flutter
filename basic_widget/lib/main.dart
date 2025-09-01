@@ -1,4 +1,6 @@
-import 'package:basic_widget/example/text_widget.dart';
+import 'package:basic_widget/example/icon_widget.dart';
+import 'package:basic_widget/example/image_widget.dart';
+import 'package:basic_widget/example/safearea_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +23,12 @@ class MyApp extends StatelessWidget {
           title: const Text('엄청난 위젯'),
           centerTitle: true,
         ),
-        body: const TextWidget(),
+        body: 
+          // TextWidget(),
+          // ImageWidget()
+          // IconWidget()
+          SafeareaWidget()
+        
       ),
       debugShowCheckedModeBanner: false,
     );
