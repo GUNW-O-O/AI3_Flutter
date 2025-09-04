@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:http_board_app/screens/board/create_screen.dart';
+import 'package:http_board_app/screens/board/detail_screen.dart';
+import 'package:http_board_app/screens/board/list_screen.dart';
+import 'package:http_board_app/screens/board/update_screen.dart';
+import 'package:http_board_app/screens/main_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +14,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: "http board app",
+      initialRoute: '/main',
+      routes: {
+        '/main'     : (context) => const MainScreen(),
+        '/board/list'     : (context) => const ListScreen(),
+        '/board/create'     : (context) => const CreateScreen(),
+        '/board/detail'     : (context) => const DetailScreen(),
+        '/board/update'     : (context) => const UpdateScreen(),
+      },
     );
   }
 }
