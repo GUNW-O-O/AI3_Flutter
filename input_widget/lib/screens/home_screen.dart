@@ -27,11 +27,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       body: TabBarView(
+        controller: controller,
         children: [
           LoginScreen(),
           JoinScreen(),
         ],
-        controller: controller,
       ),
       bottomNavigationBar: TabBar(
         tabs: const [

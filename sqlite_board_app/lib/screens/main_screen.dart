@@ -16,12 +16,12 @@ class _MainScreenState extends State<MainScreen> {
         child: ElevatedButton(
           onPressed: () {
             Navigator.pushNamed(context, '/board/list');
-          }, 
-          child: Text("게시글 목록"),
+          },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blueAccent,
             foregroundColor: Colors.white
-          )
+          ), 
+          child: Text("게시글 목록")
         ),
       ),
     );

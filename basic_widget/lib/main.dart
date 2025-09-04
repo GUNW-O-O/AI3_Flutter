@@ -1,5 +1,3 @@
-import 'package:basic_widget/example/icon_widget.dart';
-import 'package:basic_widget/example/image_widget.dart';
 import 'package:basic_widget/example/safearea_widget.dart';
 import 'package:flutter/material.dart';
 

@@ -153,7 +153,7 @@ class _ListScreenState extends State<ListScreen> {
                               child: ListTile(
                                 leading: Text(board.no.toString()),
                                 title: Text(board.title ?? ''),
-                                subtitle: Text(board.content ?? ''),
+                                subtitle: Text(board.writer ?? ''),
                                 trailing: PopupMenuButton(
                                   itemBuilder: (BuildContext context) {
                                     return _popupMenuItems;

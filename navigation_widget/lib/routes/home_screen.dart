@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("홈 화면"),),
       body: Center(
-        child: Text("홈 화면 : ${data} ", style: TextStyle(fontSize: 32),),
+        child: Text("홈 화면 : $data ", style: TextStyle(fontSize: 32),),
       ),
       bottomSheet: Container(
         child: Row(
